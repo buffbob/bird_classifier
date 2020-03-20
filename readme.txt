@@ -1,11 +1,4 @@
-run on local host::  Bird Classifier app 
+container that runs flask production server
 
-with sqlite
-comes with some birds downloaded and ready to classify
-
-This is a docker container that allows you to run this locally on your machine.
-Visit localhost:5000 to view.
-
-
-
-
+<< docker command >>
+sudo docker run -it -p 5000:5000 <image_id>
