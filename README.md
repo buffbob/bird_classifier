@@ -13,14 +13,12 @@
   <li>flask run</li>
 </ol>
 
-<h1>Available on Docker</h1>
-<h4>Pull::   sudo docker pull paddypup/bird_1.0</h4>
-<h4>Run::  sudo docker run -it -p 8811:5000 paddypup/bird_1.0 </h4>
+<h4>Available on Docker</h4>
+<h5>Pull::   sudo docker pull paddypup/bird_1.0</h5>
+<h5>Run::  sudo docker run -it -p 8811:5000 paddypup/bird_1.0 </h5>
 
 after running, on your browser visit-  localhost:8811
 
-
-
-<h5>Visit running site- <a href="http://birdimageclassifier.us-east-2.elasticbeanstalk.com/"> here</a></h5>
+<h5>Visit the running site- <a href="http://birdimageclassifier.us-east-2.elasticbeanstalk.com/"> here</a></h5>
 <hr>
 
