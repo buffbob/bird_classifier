@@ -5,5 +5,5 @@ birders- help classify these photos. used in an ai program. visit site @
 <p>add a virtual environment and install dependencies via pip per requirements.txt</p>
 <ol>
   <li>python -m venv venv</li>
-  <li>**pip install -r requirements.txt</li>
+  <li>pip install -r requirements.txt</li>
 </ol>
