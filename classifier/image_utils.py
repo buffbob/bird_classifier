@@ -125,8 +125,8 @@ size_landscape = (300, 200)
 size_portrait = (200, 300)
 size_square = (300, 300)
 sizes = (size_landscape, size_portrait, size_square)
-per_page=20
-number_pages=20
+per_page=10
+number_pages=10
 #################
 
 def retrieve_flickr_item_urls(flickr, query, api_key, secret, per_page, number_pages):
