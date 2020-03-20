@@ -1,0 +1,15 @@
+Flask
+SQLAlchemy
+Flask-Bcrypt
+Flask-Caching
+Flask-Login
+Flask-Modus
+Flask-SQLAlchemy
+Flask-WTF
+flickrapi
+google-api-python-client
+google-auth
+google-auth-httplib2
+Pillow
+
+

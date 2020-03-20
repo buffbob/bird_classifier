@@ -1,0 +1,25 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+<div class="flex-container">
+  <div class="row">
+    <div class="col-sm-10">
+      <h5>What is our image classifier site?</h5>
+      <p>The most laborous step in producing AI models for image classification
+      is the manual classification of images to feed to the models algorithms. You
+      can help with this classification. By helping us we will give you exclusive
+      access to our bird identification apps when ready</p>
+      <p>This app will use a smart phone's video and sound capabilities to identify
+      birds in the field</p>
+        <div>
+          <h5>getting started is easy and helps alot</h5>
+        </div>
+      <div>
+        <a href="{{url_for('users.create_new')}}">
+          <button type="button"  class="btn btn-primary">Register</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock %}

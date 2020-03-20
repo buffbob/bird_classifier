@@ -1,0 +1,14 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+<div>
+
+  <h1>{{ legend }}</h1>
+  <h3>Welcome to the bird AI human portal</h3>
+  <p>we are just birders helping computers learn what we already know-</p>
+  <p>
+    to learn more click on the <a href="{{ url_for('main.start') }}">Getting Started</a> link.
+    to get on with it <a href="{{ url_for('users.create_new') }}">Register</a> or <a href="{{ url_for('users.login_page') }}">Log In.</a>
+  </p>
+</div>
+{% endblock %}

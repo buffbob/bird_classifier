@@ -1,0 +1,9 @@
+{
+  "SECRET_KEY":"4fb766da1c040c452e02703a752d233f",
+  "FLICKR_API_KEY":"AIzaSyD_f54RnSGEfmAxl65FkFnNOVLx36QxBOw",
+  "FLASK_APP":"run.py",
+  "FLASK_ENV":"development",	
+  "SQLALCHEMY_DATABASE_URI":"sqlite:///site.db",
+  "EMAIL_ADMIN":"lastgulch@gmail.com",
+  "EMAIL_PASS":"1SweetDaddy"
+}

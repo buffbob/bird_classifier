@@ -1,0 +1,69 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+<div class="container">
+  <form action="#" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      <div><label class="form-control-label" for="user_email">Email:</label></div>
+      <input class="form-control, form-control" id="user_email" name="email" type="email" value="{{ form.email }}">
+    </div>
+    {% if form.email.errors %}
+    <ul class=errors>
+      {% for error in form.email.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="form-group">
+      <div><label class="form-control-label" for="user_pass">Password: <small>default='password',  change to new password anytime</small></label></div>
+      <input class="form-control, form-control" id="user_pass" name="password" type="password">
+    </div>
+    {% if form.password.errors %}
+    <ul class=errors>
+      {% for error in form.password.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="form-group">
+      <div><label class="form-control-label" for="user_qual">Brief Qualifications:</label></div>
+      <textarea class="form-control, form-control" id="user_qual" name="qualifications" rows="3">
+        {{ form.qualifications }}
+      </textarea>
+    </div>
+    {% if form.qualifications.errors %}
+    <ul class=errors>
+      {% for error in form.qualification.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <div>
+      <h6>Please describe your level of birding expertise</h6>
+    </div>
+    
+    <div>
+      <div>
+        {% for subfield in form.expertise %}
+        <div>{{ subfield }} {{ subfield.label }}</div>
+        {% endfor %}
+        <hr>
+      </div>
+      
+      {% if form.expertise.errors %}
+      <ul>
+        {% for error in form.expertise.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <hr>
+    </div>
+    
+    <div class="text-center mt-4">
+      <input  class="" type=submit value="Update Profile">
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+
+{% from "macros.html" import radio_field %}
+
+<div class="pl-2" style="background-color:#bd9e97; font-size:10px">
+  session count = <span style="color:red">{{data['count']}}</span>
+</div>
+<div id="wrapper">
+  <div class="row">
+    <div class="booger col-md-6" style="background-color:#bd9e97;">
+      <div class="alert alert-success m-1 p-0">
+        <strong class="ml-2 mb-0">Directions</strong>
+        <hr>
+        <ul class="mb-0 article-lg-font">
+          <li>
+            first- reject if this is indistinguishable or useless
+          </li>
+          <li>
+            second- skip if you are unsure of the bird's identity
+          </li>
+          <li>
+            third- fill out the form on the right and "Classify"
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mt-2">{{ data['birdname'] }}?
+          <span class="pl-4">
+          <a class="reject-button text-center" href="{{ url_for('admin.classifying', id=data['id'], reject_flag=True,
+          image_id=data['image_id'], count=data['count'], birdname=data['birdname']) }}">REJECT</a>
+          </span>
+          <span class="pl-4">
+            <a class="skip-button text-center" href="{{ url_for('admin.classifying', id=data['id'],
+            reject_flag=False, unsure_flag=True, image_id=data['image_id'], count=data['count'], birdname=data['birdname']) }}">SKIP</a>
+          </span>
+        </h4>
+      </div>
+      <img
+          class="mt-2 mb-2"
+          src="{{ url_for('static', filename='images/downloaded/' + data['image_folder'] + '/'
+          + data['image_uri'] ) }}"
+          style="width:100%">
+    </div>
+    <div class="col-md-6 pl-4 pt-2">
+      <div class="text-center">
+        <h5>Bird ID Form</h5>
+      </div>
+      <form action="#" class="" id="class-form" method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+          {{ radio_field(form.is_male) }}
+          {{ radio_field(form.is_juvenile) }}
+          {{ radio_field(form.is_standard) }}
+          {{ radio_field(form.quality) }}
+          {{ radio_field(form.certainty) }}
+        </div>
+        <input name="image_id" type="hidden" value="{{ data['image_id'] }}">
+        <input name="image_folder" type="hidden" value="{{ data['image_folder'] }}">
+        <input id="count" name="count" type="hidden" value="{{ data['count'] }}">
+        <input name="birdname" type="hidden" value="{{ data['birdname'] }}">
+        <div>
+          <div class="text-center mt-4">
+            <input class="btn btn-danger class-button" type="submit" value="Classify">
+          </div>
+          <div class="text-center pt-4">
+            <button class="btn btn-danger class-button2" onclick="deselect()" type="button">Clear inputs</button>
+          </div>
+        </div>
+      </form>
+      <div>
+        <h1>{{ imagez }}</h1>
+      </div>
+      
+      {% if delete_fields == "True" %}
+      <script>
+    var elements = document.getElementsByTagName("input");
+      for (var inp of elements) {
+        if (inp.type === "radio")
+          inp.checked = false;}
+      
+      
+      
+      </script>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

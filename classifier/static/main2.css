@@ -1,0 +1,312 @@
+body {
+  background: #fafafa;
+  font-family: arial;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+hr {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    margin-bottom:4px;
+    margin-top:2px;
+    color:#ccccc3;
+}
+
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.article-title {
+  color: #444444;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.article-title-sm {
+  color: #444444;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.article-title-md {
+  color: #444444;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.article-title-lg {
+  color: #444444;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+a.at_hover:hover{
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content-lg {
+  white-space: pre-line;
+  font-size: 14px;
+}
+
+.article-content-md{
+  white-space: pre-line;
+  font-size: 12px;
+}
+
+.article-content-sm{
+  white-space: pre-line;
+  font-size: 10px;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #e3e3e3
+  /*font-size: 12px;*/
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.article-xsm-font {
+  font-size: 8px;
+}
+
+.article-sm-font {
+  font-size: 10px;
+}
+
+.article-md-font {
+  font-size: 12px;
+}
+
+.article-lg-font {
+  font-size: 14px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+
+
+/* ######################## for main header */
+
+
+/* ######################## for main content */
+
+.small-count {
+  font-size:10px;
+  color:red;
+}
+
+
+#mc-home-user_image{
+    height:30px;
+    width:30px;
+}
+#red{
+    color:red;
+}
+
+/* ############## user-page  */
+
+#user_article_image{
+    width:40;
+}
+
+.user-mc-article-image{
+    height:40px;
+    width:50px;
+}
+
+.user-mc-content-block{
+    height:100px;
+}
+
+.title-highlight{
+    background-color:#dddddd;
+}
+
+
+table{
+    #width:100%;
+}
+
+th, td {
+    text-align:left;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+tr:nth-child(even){
+    background-color:#c2c2c2;
+}
+
+tr:nth-child(odd){
+    background-color:hsl(0, 100%, 100%);
+}
+
+.sm-table-row{
+    font-size:10px;
+}
+
+.select-multi{
+    font-size:12px;
+    height:400px;
+}
+
+.select-multi2{
+    width:400px
+}
+
+
+/*    ###################   */
+
+.banner{
+    background: #fbdabc;
+    margin-left: 20px;
+}
+
+
+#banner{
+    background: #fbdabc;
+    margin-left: 20px;
+}
+
+/* ################### classifying form ###  */
+
+.reject-button{
+    display:inline-block;
+    width:140px;
+    height:50px;
+    /* background-image:url(your-image.gif) bottom; */
+    background: #fbdadc;
+    background-position: center;
+    color:red;
+    border-style: ridge;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size:22px;
+}
+
+.skip-button{
+    display:inline-block;
+    width:140px;
+    height:50px;
+    /* background-image:url(your-image.gif) bottom; */
+    background: #fbdadc;
+    background-position: center;
+    color:red;
+    border-style: ridge;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size:22px;
+}
+.reject-button:hover{
+    background-position:top;
+}
+
+
+.skip-button:hover{
+    background-position:top;
+}
+
+.class_label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.class_input{
+    font-size: 14px;
+}
+
+.input-group{
+    background: #fbdadc ;
+}
+
+.class-button{
+    width:300px;
+    height:50px;
+    border: 2px solid black;
+
+}
+.class-button:hover{
+    background-color:pink
+    color:black;
+
+}
+
+.class-button2{
+    width:200px;
+    height:50px;
+    border: 2px solid black;
+}
+
+.class-button2:hover{
+    background-color:pink;
+    color:black;
+
+}

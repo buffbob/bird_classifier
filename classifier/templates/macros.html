@@ -1,0 +1,131 @@
+
+{% macro render_field(field) %}
+<dt>{{ field.label(class="form-control-label") }}</dt>
+<dd >{{ field(class="form-control, form-control-lg", **kwargs)|safe }}
+  {% if field.errors %}
+    <ul class=errors>
+    {% for error in field.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  </dd>
+{% endmacro %}
+
+
+{% macro render_registration(field) %}
+  <dt>{{ field.label(class="form-control-label") }}
+  <dd>{{ field(class="form-control, form-control-lg", **kwargs)|safe }}
+  {% if field.errors %}
+    <ul class=errors>
+    {% for error in field.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  </dd>
+{% endmacro %}
+
+
+{% macro nav_bar() %}
+<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="{{ url_for('main.index') }}">
+        <img alt="Flower" class="rounded"
+             src="{{ url_for('static', filename='site-images/raven_tn.jpg')}}" title="White Flower">
+      </a>
+      {% if legend %}
+      <a class="navbar-brand mr-4" href="{{ url_for('main.index') }}">Bird's Eye</a>
+      <span class="article-title muted">- {{ legend }}</span>
+      {% else %}
+      <a class="navbar-brand mr-4" href="{{ url_for('main.index') }}">Bird's Eye</a>
+      {% endif %}
+      <button aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler"
+              data-target="#navbarToggle" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        
+        <!-- Navbar Right Side -->
+        {% if current_user.is_authenticated %}
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{{ url_for('main.index') }}">Account</a>
+          <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
+        </div>
+        {% else %}
+   
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{{ url_for('main.start') }}">Getting Started</a>
+          <a class="nav-item nav-link" href="{{ url_for('users.create_new') }}">Register</a>
+          <a class="nav-item nav-link" href="{{ url_for('users.login_page') }}">Login</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  
+  </nav>
+</header>
+{% endmacro %}
+
+{% macro radio_field(field) %}
+        <div class="border">
+          <div class=row>
+            <div class="col-form-label col-sm-4 "><span class="pl-1">{{ field.label }}</span></div>
+            <div class="col-sm-8">
+              <div class="form-check">
+                {% for subfield in field %}
+                  <div class="field">{{ subfield }} <span class="class_label">{{ subfield.label }}</span></div>
+                {% endfor %}
+              </div>
+              {% if field.errors %}
+              <ul>
+                {% for error in field.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+{% endmacro %}
+
+{% macro select_field(field) %}
+        <div class="border">
+          <div class=row>
+            <div class="col-form-label col-sm-4 "><span class="pl-1">{{ field.label }}</span></div>
+            <div class="col-sm-8">
+              <div class="form-check">
+                {% for subfield in field %}
+                <input>
+                  <div class="field">{{ subfield }} <span class="class_label">{{ subfield.label }}</span></div>
+                
+                {% endfor %}
+              </div>
+              {% if field.errors %}
+              <ul>
+                {% for error in field.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+{% endmacro %}
+
+
+{% macro render_field(field) %}
+<dt>{{ field.label(class="form-control-label") }}</dt>
+<dd >{{ field(class="form-control, form-control-lg", **kwargs)|safe }}
+  {% if field.errors %}
+    <ul class=errors>
+    {% for error in field.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  </dd>
+{% endmacro %}
+

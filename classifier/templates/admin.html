@@ -1,0 +1,105 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+<div class="container-flex">
+  <div class="row">
+    <div class="col-md-3">
+      <form action="" id="get-form" method="POST">
+        <div class="mb-2">
+          <select class="select-multi article-lg-font" id="PickBirds" multiple name="PickBirds">
+            {% for bird in data['birds'] %}
+            <option class="" value="{{ bird.Name }}">{{ bird.Name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <!--
+        this if statement is strange... fixit?
+        option1= just remove it. I cant think of what would break. maybe later.
+        -->
+        {% if data['ms'] %}
+        <input class="btn btn-sm btn-outline-dark mb-2" type="submit" value="Pick Birds to download">
+        {% else %}
+        <input class="btn btn-sm btn-outline-dark mb-2" type="submit" value="Pick Birds to download">
+        {% endif %}
+      </form>
+    </div>
+    <div class="col-md-6">
+      {% if data['ms'] %}
+      <div class="text-center" style="background-color:#b3b3b3">
+        <h6>you have chosen to download photos for the following birds</h6>
+        <h6>Is that correct?</h6>
+      </div>
+      <div class="mb-2">
+        <form action="admin/downloaded" class="f" id="post-form" method="POST">
+          {% for each in data['ms'] %}
+          <div class="form-group">
+            <input class="form-control-sm" name="species" size="35" type="text" value="{{ each }}">
+          </div>
+          {% endfor %}
+        
+        </form>
+        <button class="btn btn-success mr-2" form="post-form" type="submit">Yes, begin downloads</button>
+        <a href="{{ url_for('admin.admin_page') }}">
+          <button class="btn btn-secondary" type="button">No, reselect bird species</button>
+        </a>
+      
+      </div>
+      <hr>
+      <hr>
+      {% endif %}
+      <div class="mt-4">
+        <h4>Downloaded Image Data</h4>
+        <hr>
+      </div>
+      <table class="table table-bordered">
+        <tr>
+          <th>Species downloaded</th>
+          <th>Number downloaded</th>
+          <th>Number classified</th>
+        
+        </tr>
+        {% if data['num_birds'] == 0 %}
+        <tr>
+          <td style="text-align:center">NONE</td>
+        </tr>
+        {% endif %}
+        
+        
+        
+        {#todo: is this right#}
+        
+        
+        
+        {% for stat_dict in data['stats'] %}
+        <tr class="sm-table-row">
+          <td style="text-align:center">{{ stat_dict['name'] }}</td>
+          <td style="text-align:center">{{ stat_dict['number_downloaded'] }}</td>
+          <td style="text-align:center">{{ stat_dict['number_classified'] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    
+    <div class="col-md-3">
+      <div style="height:600px;overflow:auto;">
+        <table>
+          <tr>
+            <th>Species List</th>
+          </tr>
+          {% for bird in data['birds'] %}
+          <tr class="sm-table-row">
+            {% if bird.downloaded %}
+            <td style="color:red">{{ bird.Name }}</td>
+            {% else %}
+            <td style="color:black">{{ bird.Name }}</td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

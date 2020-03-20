@@ -1,0 +1,32 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+
+
+<div>
+  <div>
+    <h3 class="mr-4">Your profile</h3><span class="float-right">You have classified <span style="color:red">{{ data['number_classified'] }}</span> birds</span>
+  </div>
+  <div>
+    <table class="table table-bordered">
+      <tr>
+        <th>your email</th>
+        <td>{{ data['user'].email }}</td>
+        
+      </tr>
+      <tr>
+        <th>level of expertise</th>
+        <td>{{ data['user'].expertise }}</td>
+      </tr>
+      <tr>
+        <th>qualifications</th>
+        <td>{{ data['user'].qualifications }}</td>
+      </tr>
+    </table>
+  </div>
+    <div class="text-center">
+    <a href="{{data['id']}}/edit"><input type="submit" value="Change user profile"></a>
+    <a href="{{ url_for('admin.classify', id= data['id'], count=0) }}"><input type="submit" value="Start Classifying"></a>
+  </div>
+</div>
+{% endblock %}

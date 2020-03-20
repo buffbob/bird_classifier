@@ -1,0 +1,31 @@
+{% extends "base-template.html" %}
+
+{% block main_content %}
+
+
+
+<div class="container-flex">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="text-center">
+        <h3> Bird species available to classify</h3>
+        <div>Please choose a bird to classify that you are
+          familiar with from the dropdown below, press "Begin" and follow
+          directions on the
+          following page.</div>
+        <hr class="mb-4">
+        <form action="#" id='pick-form' method="POST">
+          <div style="background-color:#bd9e97" class="mb-4">
+            <select class="select-multi2 m-2" id="PickBird" name="PickBird">
+              {% for birdname in data['ready_to_classify'] %}
+              <option style="font-size:20px" value="{{ birdname }}">{{ birdname }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        <button style="background-color:#bd9e97" class="btn btn-lg mr-2 mt-4" form="pick-form" type="submit">Begin</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
