@@ -16,14 +16,8 @@ from classifier import db
 
 cse_api_key = "AIzaSyD_f54RnSGEfmAxl65FkFnNOVLx36QxBOw"
 se_id = "006513363166106579724:xubk4naonbm"  # for the flicker engine
-############
 
-###  delete these parts of the file
-def duh():
-    print("duh")
-    return "duh"
 
-#########################
 ######    these first methods work with google cse api ########
 ######################
 
