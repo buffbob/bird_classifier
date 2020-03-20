@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "paddypup/catnip",
+    "Name": "paddypup/bird_1.0",
     "Update": "true"
   },
   "Ports": [
