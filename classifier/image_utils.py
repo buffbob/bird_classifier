@@ -14,8 +14,8 @@ from sqlalchemy.exc import InvalidRequestError
 from flask import current_app
 from classifier import db
 
-cse_api_key = "AIzaSyD_f54RnSGEfmAxl65FkFnNOVLx36QxBOw"
-se_id = "006513363166106579724:xubk4naonbm"  # for the flicker engine
+#cse_api_key = "this is the goggle api key location"
+se_id = "this is the flicker api key location"  # for the flicker engine
 
 
 ######    these first methods work with google cse api ########
