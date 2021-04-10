@@ -1,10 +1,12 @@
 # bird_classifier
 <h2>Flask web app for human image classification</h2>
-<h5>image classification tasks require lots of labeled data. This app scraps images from the web and then helps humans classify them. The app has been tailored for bird images but can be altered for other images.</h5>
+<h5>image classification tasks require lots of labeled data. This app allows administrator to scrap 
+images from the web and then helps human users classify them. The app has been tailored for bird images 
+but can be altered for other needs.</h5>
 
-<h4> to run locally using flask server </h4>
-<h5>change code on line 18 of image_utils.py to be a flicker api (user:key value) pair</h5>
-<p>add a virtual environment and install dependencies and ...</p>
+<h4> to run locally using flask server and a sqlite3 database</h4>
+<h5>change code on line 18 of image_utils.py to be your flicker api key/value pair</h5>
+<h5>add a virtual environment and install dependencies</h5>
 <ol>
   <li>python3 -m venv venv</li>
   <li>source venv/bin/activate</li>
