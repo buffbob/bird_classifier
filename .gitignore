@@ -2,3 +2,10 @@ venv/*
 __pycache__/*
 .idea/*
 classifier/__pycache__/*
+
+classifier/admin/__pycache__/*
+
+classifier/errors/__pycache__/*
+
+classifier/main/__pycache__/*
+classifier/users/__pycache__/*

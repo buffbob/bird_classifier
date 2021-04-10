@@ -8,7 +8,7 @@ app = create_app()
 with app.app_context():
     db.create_all()
     db.session.commit()
-    admin = User(email="admin@AI.com", qualifications="the dude",expertise=4, password="password")
+    admin = User(email="admin@AI.com", qualifications="the dude", expertise=4, password="admin_password")
     db.session.add(admin)
 
     df = pd.read_csv("classifier/static/birds.csv")
