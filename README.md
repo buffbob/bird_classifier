@@ -5,7 +5,7 @@ images from the web and then helps users classify them. The app has been tailore
 but can be altered for other needs.</h5>
 
 <h4>To run locally using a flask development server and a sqlite3 database</h4>
-<p>change code on line 18 of image_utils.py to be your flicker api key/value pair add a virtual environment and install dependencies</p>
+<p>change code on line 115 of image_utils.py to be your flicker api key/value pair add a virtual environment and install dependencies</p>
 <ol>
   <li>clone this repo and enter its directory</li>
   <li><span>create and activate a new environment---</span> python3 -m venv venv</li>

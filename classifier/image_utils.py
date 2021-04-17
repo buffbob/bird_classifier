@@ -112,7 +112,7 @@ def scrape(query, key, se_id, number=100):
 # these methods   and variables work with flicker
 ##################################
 
-api_key='b63a6d85d9aab8c4b197b76dcbd76baa'
+api_key='api key goes here'
 secret = '3c02d12d74e9d90e'
 ext_list = ['.jpg', '.png']
 size_landscape = (300, 200)
