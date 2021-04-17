@@ -4,16 +4,7 @@
 images from the web and then helps users classify them. The app has been tailored for bird images 
 but can be altered for other needs.</h5>
 
-<<<<<<< HEAD
 <h4>To run locally using a flask development server and a sqlite3 database</h4>
-=======
-<<<<<<< HEAD
-<h4>To run locally using a flask development server and a sqlite3 database-----</h4>
-=======
-<h4>To run locally using a flask development server and a sqlite3 database</h4>
-<p>change code on line 115 of image_utils.py to be your flicker api key/value pair add a virtual environment and install dependencies</p>
->>>>>>> a1c145a6ea5aa3bfb7c26fb385acacde6fe7a4bc
->>>>>>> d75314eb3698d6ca980c55f015e78201dd83ca31
 <ol>
   <li>clone this repo and enter its directory</li>
   <li><span>create and activate a new environment---</span> python3 -m venv venv</li>
