@@ -7,12 +7,13 @@ but can be altered for other needs.</h5>
 <h4>To run locally using a flask development server and a sqlite3 database</h4>
 <p>change code on line 18 of image_utils.py to be your flicker api key/value pair add a virtual environment and install dependencies</p>
 <ol>
-  <li>python3 -m venv venv</li>
-  <li>source venv/bin/activate</li>
-  <li>pip install -r requirements.txt</li>
-  <li>export FLASK_APP=run.py</li>
+  <li>clone this repo and enter its directory</li>
+  <li><span>create and activate a new environment---</span> python3 -m venv venv</li>
+  <li><span>activate environment---</span> source venv/bin/activate</li>
+  <li><span>add dependencies---</span> pip install -r requirements.txt</li>
+  <li><span>create FLASK_APP variable---</span>export FLASK_APP=run.py</li>
   <li>flask run</li>
-  <li>to access admin privileges sign-in with admin credentials found in init_db.py</li>
+  <li>to access admin privileges sign-in with admin credentials found on line 11 in init_db.py</li>
 </ol>
 
 <h4>Available on Docker</h4>
