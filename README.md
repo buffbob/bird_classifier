@@ -23,3 +23,4 @@ but can be altered for other needs.</h5>
 after running, on your browser visit-  localhost:8811
 
 <h5>Visit the running site- <a href="http:birdimageclassifier.us-east-2.elasticbeanstalk.com/"> here</a></h5>
+<h5>contact me for administration privileges on this site!</h5>
