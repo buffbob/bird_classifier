@@ -4,6 +4,12 @@
 images from the web and then helps users classify them. The app has been tailored for bird images 
 but can be altered for other needs.</h5>
 
+<img src="admin.png">
+
+<hr>
+
+<img src="classifing.png">
+     
 <h4>To run locally using a flask development server and a sqlite3 database</h4>
 <ol>
   <li>clone this repo and enter its directory</li>
