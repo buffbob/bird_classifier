@@ -4,10 +4,11 @@
 images from the web and then helps users classify them. The app has been tailored for bird images 
 but can be altered for other needs.</h5>
 
+<h3>The classification page</h3>
 <img src="admin.png">
 
 <hr>
-
+<h3>Adminstration Page (ie The Flicker Scrapper)
 <img src="classifing.png">
      
 <h4>To run locally using a flask development server and a sqlite3 database</h4>
