@@ -1,7 +1,7 @@
-# bird_classifier
+# Bird Image Scrapper and Classifier
 <h5>Image classification tasks require lots of labeled data. This app allows administrator to scrap 
 images from the web and then helps users classify them. The app has been tailored for bird images 
-but can be altered for other needs.</h5>
+but can be altered for other needs. This app is currently running at <a href="http:birdimageclassifier.us-east-2.elasticbeanstalk.com/">BirdApp</a>.</h5>
 
 <h3>The classification page</h3>
 <img src="admin.png">
