@@ -1,5 +1,4 @@
 # bird_classifier
-<h2>Flask web app for image classification</h2>
 <h5>Image classification tasks require lots of labeled data. This app allows administrator to scrap 
 images from the web and then helps users classify them. The app has been tailored for bird images 
 but can be altered for other needs.</h5>
@@ -22,6 +21,7 @@ but can be altered for other needs.</h5>
   <li>run the app--- flask run</li>
   <li>to access admin privileges sign-in with admin credentials found on line 11 in init_db.py</li>
 </ol>
+     
 
 <h4>Available on Docker</h4>
 <h5>Pull::   sudo docker pull paddypup/bird_1.0</h5>
